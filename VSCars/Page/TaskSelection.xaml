@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.TaskSelection">
+
+    <VerticalStackLayout Spacing="20" Padding="20">
+
+        <Label Text="Bem-vindo ao VsCars!"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+
+        <Image Source="dotnet_bot.png"
+               HeightRequest="100"
+               WidthRequest="250"
+               HorizontalOptions="Center" />
+
+        <Label Text="Selecione a Opção Desejada:" />
+
+        <Button x:Name="btnMarcas"
+                Text="Marcas"
+                Clicked="btnMarcasSelected_Clicked" />
+
+        <Button x:Name="btnVeiculos"
+                Text="Veículos"
+                Clicked="btnVeiculosSelected_Clicked" />
+
+        <Button x:Name="btnModelos"
+                Text="Modelos"
+                Clicked="btnModelosSelected_Clicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
+

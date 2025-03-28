@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.ListViewModelosPage"
+             Title="Lista de Veículos">
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}"
+          HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Padding="10" Margin="5" CornerRadius="10" BorderColor="Gray">
+                            <StackLayout>
+                                <Label Text="{Binding Nome}" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding Ano}" FontSize="16"/>
+                                <Label Text="{Binding Modelo}" FontSize="16"/>
+
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Button Text="Atualizar"
+                                    BackgroundColor="Orange"
+                                    TextColor="White"
+                                    Clicked="btnAtualizar_Clicked"
+                                    CommandParameter="{Binding .}"/>
+
+                                    <Button Text="Deletar"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Clicked="btnDeletar_Clicked"
+                                    CommandParameter="{Binding ID}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.AtualizacaoModelosPage"
+             Title="Atualizar Modelo">
+    <VerticalStackLayout Spacing="15" Padding="20">
+
+        <Label 
+            Text="Atualização de Modelo"
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalOptions="Center"/>
+
+        <Label Text="ID do Modelo:"/>
+        <Entry x:Name="txtIDModelo" 
+               Placeholder="ID do Modelo"
+               Keyboard="Numeric"/>
+
+        <Label Text="Nome do Modelo:"/>
+        <Entry x:Name="txtNomeModelo"
+               Placeholder="Nome do Modelo"/>
+
+        <Label Text="Observação:"/>
+        <Editor x:Name="txtObservacao"
+                Placeholder="Digite uma observação"
+                AutoSize="TextChanges"/>
+
+        <Button x:Name="btnAtualizar"
+                Text="Atualizar Modelo"
+                Clicked="btnAtualizar_Clicked"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
+
+        <Button x:Name="btnCancelar"
+                Text="Cancelar"
+                Clicked="btnCancelar_Clicked"
+                BackgroundColor="Red"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+</ContentPage>

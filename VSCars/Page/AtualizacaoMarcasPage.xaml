@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.AtualizacaoMarcasPage"
+             Title="Atualizar Marca">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label 
+            Text="Atualização da Marca"
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalOptions="Center"/>
+
+        <Label Text="Nome da Marca:"/>
+        <Entry x:Name="txtNomeMarca" Placeholder="Nome da marca"/>
+
+        <Label Text="ID da Marca:"/>
+        <Entry x:Name="txtIDMarca" Placeholder="ID da marca" Keyboard="Numeric"/>
+
+        <Label Text="Observação:"/>
+        <Editor x:Name="txtObservacao" Placeholder="Observações" AutoSize="TextChanges"/>
+
+        <Button Text="Salvar Alteração"
+                Clicked="btnSalvarAlteracao_Clicked"
+                BackgroundColor="Green"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
+
+        <Button Text="Cancelar"
+                Clicked="btnCancelar_Clicked"
+                BackgroundColor="Red"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.MarcasPage"
+             Title="Gerenciar Marcas">
+
+    <VerticalStackLayout Spacing="15"
+                         Padding="20">
+
+        <Label 
+            Text="Gerenciamento de Marcas"
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalOptions="Center"/>
+
+        <Label Text="Digite o nome da Marca:"/>
+        <Entry x:Name="txtNomeMarca" Placeholder="Nome da marca" />
+
+        <Label Text="Digite o ID da Marca:"/>
+        <Entry x:Name="txtIDMarca" Placeholder="ID da marca" Keyboard="Numeric"/>
+
+        <Label Text="Digite uma observação:"/>
+        <Editor x:Name="txtObservacao" Placeholder="Observações" AutoSize="TextChanges"/>
+
+        <Button x:Name="btnInserir"
+                Text="Inserir"
+                Clicked="btnInserir_Clicked"
+                BackgroundColor="DodgerBlue"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
+
+        <Button x:Name="btnCancelar"
+                Text="Cancelar"
+                Clicked="btnCancelar_Clicked"
+                Background="Red"/>
+
+        <Button x:Name="btnAtualizar"
+         Text="Atualizar"
+            Clicked="btnAtualizar_Clicked"
+            BackgroundColor="Orange"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+</ContentPage>

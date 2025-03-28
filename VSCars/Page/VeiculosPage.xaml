@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.VeiculosPage"
+             Title="VeiculosPage">
+    <VerticalStackLayout Spacing="15" Padding="20">
+
+        <Label Text="Gerenciamento de Veículos"
+               FontAttributes="Bold"
+               FontSize="24"
+               HorizontalOptions="Center"/>
+
+        <Label Text="Insira o ID:"/>
+        <Entry x:Name="txtIDVeiculo" 
+               Placeholder="ID do veículo" 
+               Keyboard="Numeric"/>
+
+        <Label Text="Ano de Fabricação:"/>
+        <Entry x:Name="txtAnoFabricacao" 
+               Placeholder="Ex: 2022" 
+               Keyboard="Numeric"/>
+
+        <Label Text="Nome do Veículo:"/>
+        <Entry x:Name="txtNomeVeiculo" 
+               Placeholder="Digite o nome do veículo"/>
+
+        <Label Text="Observação:"/>
+        <Editor x:Name="txtObservacao" 
+                Placeholder="Digite uma observação" 
+                AutoSize="TextChanges"/>
+
+        <Label Text="Modelo:"/>
+        <Label x:Name="lblModelo" 
+               Text="Modelo do veículo"/>
+
+        <Button x:Name="btnAdicionar"
+                Text="Adicionar Veículo"
+                Clicked="btnAdicionar_Clicked"
+                BackgroundColor="Green"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
+
+        <Button x:Name="btnCancelar"
+                Text="Cancelar"
+                Clicked="btnCancelar_Clicked"
+                Background="Red"/>
+
+    </VerticalStackLayout>
+</ContentPage>

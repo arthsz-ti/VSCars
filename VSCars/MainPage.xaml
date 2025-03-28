@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0"
+                             Spacing="25"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+
+            <Image Source="dotnet_bot.png"
+                   HeightRequest="185"
+                   Aspect="AspectFit" />
+
+            <Label x:Name="lblCabecalho"
+                   Text="Bem-vindo!"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Entry Placeholder="Username" />
+            <Entry Placeholder="Senha" IsPassword="True" />
+
+            <Label Text="Esqueceu sua senha?" 
+                   TextColor="Blue" 
+                   FontSize="Small" 
+                   HorizontalOptions="End"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <CheckBox IsChecked="False"/>
+                <Label Text="Lembrar minha senha" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Entrar" 
+                    BackgroundColor="Red" 
+                    TextColor="White"
+                    HorizontalOptions="Center"/>
+
+            <Button Text="Criar conta"
+                    HorizontalOptions="Center"/>
+            
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

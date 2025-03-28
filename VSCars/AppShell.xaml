@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell
+   x:Class="VSCars.AppShell"
+   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   xmlns:page="clr-namespace:VSCars.Page"
+   xmlns:local="clr-namespace:VSCars"
+   Shell.FlyoutBehavior="Flyout"
+   Shell.TabBarIsVisible="True"
+   Title="VSCars">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Image Source="fundobranco.png" HeightRequest="100" WidthRequest="100"/>
+            <Label Text="VSCars APP" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="VSCars MENU" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" Icon="home.png"/>
+        <ShellContent Title="Opção" ContentTemplate="{DataTemplate page:TaskSelection}" Route="TaskSelectionPage" Icon="itens.png"/>
+        <ShellContent Title="Marcas" ContentTemplate="{DataTemplate page:MarcasPage}" Route="MarcasPage" Icon="marca.png" />
+        <ShellContent Title="Veículos" ContentTemplate="{DataTemplate page:VeiculosPage}" Route="VeiculosPage" Icon="veiculo.png" />
+        <ShellContent Title="Modelos" ContentTemplate="{DataTemplate page:ModeloPage}" Route="ModeloPage" Icon="star.png" />
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Copyright @Arthur Saraiva" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
+</Shell>
