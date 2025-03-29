@@ -23,7 +23,7 @@
         <Editor x:Name="txtObservacao" Placeholder="Observações" AutoSize="TextChanges"/>
 
         <Button x:Name="btnInserir"
-                Text="Inserir"
+                Text="Criar Marca"
                 Clicked="btnInserir_Clicked"
                 BackgroundColor="DodgerBlue"
                 TextColor="White"
@@ -37,7 +37,7 @@
                 Background="Red"/>
 
         <Button x:Name="btnAtualizar"
-         Text="Atualizar"
+         Text="Atualizar Marca"
             Clicked="btnAtualizar_Clicked"
             BackgroundColor="Orange"
             TextColor="White"

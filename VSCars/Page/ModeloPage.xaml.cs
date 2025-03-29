@@ -11,23 +11,21 @@ namespace VSCars.Page
         {
             if (!ValidarCampos())
             {
-                await DisplayAlert("Erro", "Preencha todos os campos obrigatórios!", "OK");
+                await DisplayAlert("Erro", "Preencha todos os campos obrigatorios!", "OK");
                 return;
             }
 
+            // Criar novo modelo com os dados inseridos
             var novoModelo = new Modelo
             {
-                ID = int.Parse(txtIDModelo.Text),  // Nome corrigido
-                Nome = txtNomeModelo.Text,          // Nome corrigido
+                ID = int.Parse(txtIDModelo.Text),
+                Nome = txtNomeModelo.Text,
                 Observacao = txtObservacao.Text
             };
 
-            // Se estiver usando a abordagem do construtor:
+            // Navegar para a ListViewModelos passando o novo modelo
             await Navigation.PushAsync(new ListViewModelos(novoModelo));
 
-            // Ou se estiver usando MessagingCenter:
-            // MessagingCenter.Send(this, "NovoModeloAdicionado", novoModelo);
-            // await Navigation.PopAsync();
         }
 
         private bool ValidarCampos()
@@ -38,22 +36,30 @@ namespace VSCars.Page
 
         private async void btnAtualizar_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIDModelo.Text) || string.IsNullOrWhiteSpace(txtNomeModelo.Text))
+            if (!ValidarCampos())
             {
                 await DisplayAlert("Erro", "Preencha o ID e o Nome do Modelo!", "OK");
                 return;
             }
 
+            // Criar modelo temporário com os dados para edição
+            var modeloEditavel = new Modelo
+            {
+                ID = int.Parse(txtIDModelo.Text),
+                Nome = txtNomeModelo.Text,
+                Observacao = txtObservacao.Text
+            };
+
             await Navigation.PushAsync(new AtualizacaoModelosPage(
-                txtIDModelo.Text,
-                txtNomeModelo.Text,
-                txtObservacao.Text
+                modeloEditavel.ID.ToString(),
+                modeloEditavel.Nome,
+                modeloEditavel.Observacao
             ));
         }
 
         private async void btnCancelar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Shell.Current.GoToAsync("//TaskSelectionPage");
         }
     }
 }

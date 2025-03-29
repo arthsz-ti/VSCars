@@ -6,7 +6,6 @@ namespace VSCars.Page
         {
             InitializeComponent();
 
-            // Preenche os campos com os dados passados
             txtIDModelo.Text = idModelo;
             txtNomeModelo.Text = nomeModelo;
             txtObservacao.Text = observacao;
@@ -14,22 +13,36 @@ namespace VSCars.Page
 
         private async void btnAtualizar_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIDModelo.Text) || string.IsNullOrWhiteSpace(txtNomeModelo.Text))
+            if (!ValidarCampos())
             {
-                await DisplayAlert("Erro", "Preencha o ID e o Nome do Modelo!", "OK");
+                await DisplayAlert("Erro", "Preencha todos os campos obrigatórios!", "OK");
                 return;
             }
 
-            // Simulação de atualização do modelo (substituir por lógica real)
-            await DisplayAlert("Sucesso", "Modelo atualizado com sucesso!", "OK");
+            // Criar modelo atualizado
+            var modeloAtualizado = new Modelo
+            {
+                ID = int.Parse(txtIDModelo.Text),
+                Nome = txtNomeModelo.Text,
+                Observacao = txtObservacao.Text
+            };
 
-            // Voltar para a página anterior após a atualização
+            // Exibir mensagem de sucesso com o nome do modelo atualizado
+            await DisplayAlert("Sucesso", $"Modelo '{modeloAtualizado.Nome}' atualizado com sucesso!", "OK");
+
+            // Navegar de volta para a lista
             await Navigation.PopAsync();
+        }
+
+        private bool ValidarCampos()
+        {
+            return !string.IsNullOrWhiteSpace(txtIDModelo.Text) &&
+                   !string.IsNullOrWhiteSpace(txtNomeModelo.Text);
         }
 
         private async void btnCancelar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync(); // Retorna para a página anterior
+            await Navigation.PopAsync();
         }
     }
 }

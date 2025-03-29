@@ -27,13 +27,18 @@
                 AutoSize="TextChanges"/>
 
         <Button x:Name="btnInserir"
-                Text="Adicionar Veiculo"
+                Text="Criar Modelo"
                 Clicked="btnInserir_Clicked"
                 BackgroundColor="DodgerBlue"
                 TextColor="White"
                 FontAttributes="Bold"
                 CornerRadius="10"
                 HorizontalOptions="Fill"/>
+
+        <Button x:Name="btnCancelar"
+                Text="Cancelar"
+                Clicked="btnCancelar_Clicked"
+                Background="Red"/>
 
         <Button x:Name="btnAtualizar"
              Text="Atualizar Modelo"
@@ -45,10 +50,7 @@
              HorizontalOptions="Fill"/>
 
 
-        <Button x:Name="btnCancelar"
-                Text="Cancelar"
-                Clicked="btnCancelar_Clicked"
-                Background="Red"/>
+
 
     </VerticalStackLayout>
 </ContentPage>

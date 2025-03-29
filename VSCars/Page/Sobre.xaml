@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Page.Sobre"
+             Title="Sobre">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            
+            <Label Text="VSCars" 
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            
+            <Label Text="Olá! Meu nome é Arthur Saraiva de Souza, tenho 19 anos e sou estudante de Ciência da Computação na Unianchieta."
+                   FontSize="14"/>
+            
+            <Label Text="Atualmente, estou desenvolvendo meu aplicativo VSCars, um projeto voltado para o gerenciamento de veículos, marcas e modelos."
+                   FontSize="14"/>
+            
+            <Label Text="Contato:"
+                   FontAttributes="Bold"
+                   FontSize="14"/>
+
+            <Label Text="LinkedIn: arthsz-ti - GitHub: arthsz-ti"
+                   FontSize="14"/>
+            
+            <Label Text="Desenvolvi o VSCars como parte do projeto da matéria de Desenvolvimento Mobile Android, ministrada pelo professor Juliano Marçal."
+                   FontSize="14"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

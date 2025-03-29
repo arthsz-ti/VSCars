@@ -29,9 +29,9 @@
         <Entry x:Name="txtModelo"
                Placeholder="Digite o modelo do veículo"/>
 
-        <Button Text="Salvar Alteração"
+        <Button Text="Atualizar Veiculo"
           Clicked="btnAtualizar_Clicked"
-             BackgroundColor="Green"
+             BackgroundColor="Orange"
             TextColor="White"
           FontAttributes="Bold"
           CornerRadius="10"

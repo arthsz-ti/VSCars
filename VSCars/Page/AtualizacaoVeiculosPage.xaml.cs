@@ -21,17 +21,16 @@ namespace VSCars.Page
                 return;
             }
 
-            // Simulação de atualização do veículo (substituir por lógica real)
-            await DisplayAlert("Sucesso", "Veículo atualizado com sucesso!", "OK");
+            // Aqui você pode adicionar a lógica para salvar as alterações no banco de dados
 
-            // Voltar para a página anterior após a atualização
+            // Mensagem de sucesso atualizada para incluir o nome do veículo
+            await DisplayAlert("Sucesso", $"Veículo '{txtNomeVeiculo.Text}' atualizado com sucesso!", "OK");
             await Navigation.PopAsync();
         }
 
         private async void btnCancelar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync(); // Retorna para a página anterior
+            await Navigation.PopAsync();
         }
     }
 }
-

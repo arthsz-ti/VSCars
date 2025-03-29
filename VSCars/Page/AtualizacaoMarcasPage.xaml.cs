@@ -2,26 +2,47 @@ namespace VSCars.Page
 {
     public partial class AtualizacaoMarcasPage : ContentPage
     {
-        public AtualizacaoMarcasPage(string nomeMarca, string idMarca, string observacao)
+        public AtualizacaoMarcasPage(string idMarca, string nomeMarca, string observacao)
         {
             InitializeComponent();
 
-            // Preenche os campos com os dados recebidos
-            txtNomeMarca.Text = nomeMarca;
             txtIDMarca.Text = idMarca;
+            txtNomeMarca.Text = nomeMarca;
             txtObservacao.Text = observacao;
         }
 
-        private async void btnSalvarAlteracao_Clicked(object sender, EventArgs e)
+        private async void btnAtualizar_Clicked(object sender, EventArgs e)
         {
-            // Aqui você pode implementar a lógica para salvar os dados alterados
-            await DisplayAlert("Sucesso", "Alterações salvas com sucesso!", "OK");
-            await Navigation.PopAsync(); // Volta para a página anterior
+            if (!ValidarCampos())
+            {
+                await DisplayAlert("Erro", "Preencha todos os campos obrigatórios!", "OK");
+                return;
+            }
+
+            // Criar marca atualizada
+            var marcaAtualizada = new Marca
+            {
+                ID = int.Parse(txtIDMarca.Text),
+                Nome = txtNomeMarca.Text,
+                Observacao = txtObservacao.Text
+            };
+
+            // Exibir mensagem de sucesso com o nome da marca atualizada
+            await DisplayAlert("Sucesso", $"Marca '{marcaAtualizada.Nome}' atualizada com sucesso!", "OK");
+
+            // Navegar de volta para a lista
+            await Navigation.PopAsync();
+        }
+
+        private bool ValidarCampos()
+        {
+            return !string.IsNullOrWhiteSpace(txtIDMarca.Text) &&
+                   !string.IsNullOrWhiteSpace(txtNomeMarca.Text);
         }
 
         private async void btnCancelar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync(); // Volta para a página anterior
+            await Navigation.PopAsync();
         }
     }
 }

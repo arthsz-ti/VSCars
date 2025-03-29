@@ -22,6 +22,7 @@
         <ShellContent Title="Marcas" ContentTemplate="{DataTemplate page:MarcasPage}" Route="MarcasPage" Icon="marca.png" />
         <ShellContent Title="Veículos" ContentTemplate="{DataTemplate page:VeiculosPage}" Route="VeiculosPage" Icon="veiculo.png" />
         <ShellContent Title="Modelos" ContentTemplate="{DataTemplate page:ModeloPage}" Route="ModeloPage" Icon="star.png" />
+        <ShellContent Title="Sobre" ContentTemplate="{DataTemplate page:Sobre}" Route="Sobre" Icon="info.png"/>
     </FlyoutItem>
 
     <Shell.FlyoutFooter>

@@ -3,33 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VSCars.Page.AtualizacaoMarcasPage"
              Title="Atualizar Marca">
+    <VerticalStackLayout Spacing="15" Padding="20">
 
-    <VerticalStackLayout Padding="20" Spacing="15">
-
-        <Label 
-            Text="Atualização da Marca"
-            FontAttributes="Bold"
-            FontSize="24"
-            HorizontalOptions="Center"/>
-
-        <Label Text="Nome da Marca:"/>
-        <Entry x:Name="txtNomeMarca" Placeholder="Nome da marca"/>
+        <Label Text="Atualização de Marca"
+               FontAttributes="Bold"
+               FontSize="24"
+               HorizontalOptions="Center"/>
 
         <Label Text="ID da Marca:"/>
-        <Entry x:Name="txtIDMarca" Placeholder="ID da marca" Keyboard="Numeric"/>
+        <Entry x:Name="txtIDMarca" 
+               Placeholder="ID da Marca"
+               Keyboard="Numeric"/>
+
+        <Label Text="Nome da Marca:"/>
+        <Entry x:Name="txtNomeMarca"
+               Placeholder="Nome da Marca"/>
 
         <Label Text="Observação:"/>
-        <Editor x:Name="txtObservacao" Placeholder="Observações" AutoSize="TextChanges"/>
+        <Editor x:Name="txtObservacao"
+                Placeholder="Digite uma observação"
+                AutoSize="TextChanges"/>
 
-        <Button Text="Salvar Alteração"
-                Clicked="btnSalvarAlteracao_Clicked"
-                BackgroundColor="Green"
+        <Button x:Name="btnAtualizar"
+                Text="Atualizar Marca"
+                Clicked="btnAtualizar_Clicked"
+                BackgroundColor="Orange"
                 TextColor="White"
                 FontAttributes="Bold"
                 CornerRadius="10"
                 HorizontalOptions="Fill"/>
 
-        <Button Text="Cancelar"
+        <Button x:Name="btnCancelar"
+                Text="Cancelar"
                 Clicked="btnCancelar_Clicked"
                 BackgroundColor="Red"
                 TextColor="White"

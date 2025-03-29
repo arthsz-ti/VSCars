@@ -34,9 +34,9 @@
                Text="Modelo do veículo"/>
 
         <Button x:Name="btnAdicionar"
-                Text="Adicionar Veículo"
+                Text="Criar Veículo"
                 Clicked="btnAdicionar_Clicked"
-                BackgroundColor="Green"
+                BackgroundColor="DodgerBlue"
                 TextColor="White"
                 FontAttributes="Bold"
                 CornerRadius="10"
@@ -46,6 +46,16 @@
                 Text="Cancelar"
                 Clicked="btnCancelar_Clicked"
                 Background="Red"/>
+
+
+        <Button x:Name="btnAtualizar"
+                Text="Atualizar Veiculo"
+                Clicked="btnAtualizar_Clicked"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HorizontalOptions="Fill"/>
 
     </VerticalStackLayout>
 </ContentPage>
