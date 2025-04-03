@@ -12,7 +12,7 @@
 
         <Label Text="ID da Marca:"/>
         <Entry x:Name="txtIDMarca" 
-               Placeholder="ID da Marca"
+               Placeholder="ID da Marcas"
                Keyboard="Numeric"/>
 
         <Label Text="Nome da Marca:"/>
