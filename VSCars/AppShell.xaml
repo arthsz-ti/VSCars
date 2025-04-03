@@ -12,7 +12,7 @@
     <Shell.FlyoutHeader>
         <VerticalStackLayout Padding="15" Spacing="15">
             <Image Source="fundobranco.png" HeightRequest="100" WidthRequest="100"/>
-            <Label Text="VSCars APP" HorizontalTextAlignment="Center"/>
+            <Label Text="VSCars App" HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>
     </Shell.FlyoutHeader>
 
