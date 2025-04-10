@@ -3,46 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VSCars.Page.Prova"
              Title="Prova">
-    <VerticalStackLayout 
-        Spacing="15"
-        Padding="20"
-        VerticalOptions="Center" 
-        HorizontalOptions="Center">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Cadastro de Usuário"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
 
-        <Label 
-            Text="VsCars"
-            FontSize="28"
-            FontAttributes="Bold"
-            HorizontalOptions="Center" />
+            <Entry Placeholder="CPF" 
+                   Keyboard="Numeric" />
 
-        <Image Source="git.png"
-               HeightRequest="185"
-               Aspect="AspectFit" />
+            <Entry Placeholder="Nome Completo" />
 
-        <Label 
-            Text="Arthur Saraiva de Souza"
-            FontSize="22"
-            FontAttributes="Bold"
-            HorizontalOptions="Center" />
+            <Label Text="Data de Nascimento" />
+            <DatePicker Format="dd/MM/yyyy" />
 
-        <Label 
-            Text="RA:2404043"
-            FontSize="20"
-            HorizontalOptions="Center" />
+            <Entry Placeholder="E-mail" Keyboard="Email" />
+            
+            <Entry Placeholder="Número de Telefone" />
 
-        <Label 
-            Text="Data: 02/04/2025"
-            FontSize="20"
-            HorizontalOptions="Center" />
+            <Button Text="Cadastrar"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    CornerRadius="10" />
 
-        <Button 
-            Text="Home"
-            FontSize="18"
-            BackgroundColor="Green"
-            TextColor="White"
-            CornerRadius="10"
-            Padding="10"
-            HorizontalOptions="Center"/>
-
-    </VerticalStackLayout>
+            <Button Text="Voltar"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Clicked="btnVoltarClicked" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
+

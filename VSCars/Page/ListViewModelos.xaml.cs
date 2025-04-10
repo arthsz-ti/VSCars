@@ -6,15 +6,12 @@ namespace VSCars.Page
     {
         public ObservableCollection<Modelo> Modelos { get; set; } = new ObservableCollection<Modelo>();
 
-        // Construtor padrão
         public ListViewModelos()
         {
             InitializeComponent();
             BindingContext = this;
         }
 
-        // Construtor que recebe um novo modelo
-        // Construtor que recebe um novo modelo
         public ListViewModelos(Modelo novoModelo) : this()
         {
             Modelos.Add(novoModelo);

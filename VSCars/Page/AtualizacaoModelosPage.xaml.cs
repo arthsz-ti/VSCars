@@ -19,7 +19,6 @@ namespace VSCars.Page
                 return;
             }
 
-            // Criar modelo atualizado
             var modeloAtualizado = new Modelo
             {
                 ID = int.Parse(txtIDModelo.Text),
@@ -27,10 +26,8 @@ namespace VSCars.Page
                 Observacao = txtObservacao.Text
             };
 
-            // Exibir mensagem de sucesso com o nome do modelo atualizado
             await DisplayAlert("Sucesso", $"Modelo '{modeloAtualizado.Nome}' atualizado com sucesso!", "OK");
 
-            // Navegar de volta para a lista
             await Navigation.PopAsync();
         }
 

@@ -19,7 +19,6 @@ namespace VSCars.Page
                 return;
             }
 
-            // Criar marca atualizada
             var marcaAtualizada = new Marca
             {
                 ID = int.Parse(txtIDMarca.Text),
@@ -27,7 +26,6 @@ namespace VSCars.Page
                 Observacao = txtObservacao.Text
             };
 
-            // Exibir mensagem de sucesso com o nome da marca atualizada
             await DisplayAlert("Sucesso", $"Marca '{marcaAtualizada.Nome}' atualizada com sucesso!", "OK");
 
             // Navegar de volta para a lista

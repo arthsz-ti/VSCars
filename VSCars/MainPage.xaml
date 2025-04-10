@@ -19,7 +19,8 @@
                    HorizontalOptions="Center"/>
 
             <Entry Placeholder="Username" />
-            <Entry Placeholder="Senha" IsPassword="True" />
+            <Entry Placeholder="Senha" 
+                   IsPassword="True" />
 
             <Label Text="Esqueceu sua senha?" 
                    TextColor="Blue" 

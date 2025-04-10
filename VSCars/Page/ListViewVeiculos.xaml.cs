@@ -6,14 +6,12 @@ namespace VSCars.Page
     {
         public ObservableCollection<Veiculo> Veiculos { get; set; } = new ObservableCollection<Veiculo>();
 
-        // Construtor padrão (usado quando a página é aberta sem dados)
         public ListViewModelosPage()
         {
             InitializeComponent();
             BindingContext = this;
         }
 
-        // Construtor que recebe um novo veículo e o adiciona à lista
         public ListViewModelosPage(Veiculo novoVeiculo) : this()
         {
             Veiculos.Add(novoVeiculo);

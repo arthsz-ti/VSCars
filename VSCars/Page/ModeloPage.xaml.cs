@@ -15,7 +15,6 @@ namespace VSCars.Page
                 return;
             }
 
-            // Criar novo modelo com os dados inseridos
             var novoModelo = new Modelo
             {
                 ID = int.Parse(txtIDModelo.Text),
@@ -23,7 +22,6 @@ namespace VSCars.Page
                 Observacao = txtObservacao.Text
             };
 
-            // Navegar para a ListViewModelos passando o novo modelo
             await Navigation.PushAsync(new ListViewModelos(novoModelo));
 
         }
@@ -42,7 +40,6 @@ namespace VSCars.Page
                 return;
             }
 
-            // Criar modelo temporário com os dados para edição
             var modeloEditavel = new Modelo
             {
                 ID = int.Parse(txtIDModelo.Text),

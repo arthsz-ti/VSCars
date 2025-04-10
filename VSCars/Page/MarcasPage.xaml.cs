@@ -14,7 +14,6 @@ namespace VSCars.Page
                 return;
             }
 
-            // Criar nova marca com os dados inseridos
             var novaMarca = new Marca
             {
                 ID = int.Parse(idMarca),
@@ -22,7 +21,6 @@ namespace VSCars.Page
                 Observacao = observacao
             };
 
-            // Navegar para a ListViewMarcas passando a nova marca
             await Navigation.PushAsync(new ListViewMarcas(novaMarca));
         }
 
@@ -41,7 +39,6 @@ namespace VSCars.Page
                 return;
             }
 
-            // Criar marca temporária com os dados para edição
             var marcaEditavel = new Marca
             {
                 ID = int.Parse(idMarca),

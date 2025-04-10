@@ -6,7 +6,6 @@ namespace VSCars.Page
         {
             InitializeComponent();
 
-            // Preenche os campos com os dados passados
             txtIDVeiculo.Text = idVeiculo;
             txtNomeVeiculo.Text = nomeVeiculo;
             txtAnoFabricacao.Text = anoFabricacao;
@@ -21,9 +20,7 @@ namespace VSCars.Page
                 return;
             }
 
-            // Aqui você pode adicionar a lógica para salvar as alterações no banco de dados
 
-            // Mensagem de sucesso atualizada para incluir o nome do veículo
             await DisplayAlert("Sucesso", $"Veículo '{txtNomeVeiculo.Text}' atualizado com sucesso!", "OK");
             await Navigation.PopAsync();
         }

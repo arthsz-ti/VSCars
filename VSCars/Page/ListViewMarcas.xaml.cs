@@ -6,14 +6,12 @@ namespace VSCars.Page
     {
         public ObservableCollection<Marca> Marcas { get; set; } = new ObservableCollection<Marca>();
 
-        // Construtor padrão
         public ListViewMarcas()
         {
             InitializeComponent();
             BindingContext = this;
         }
 
-        // Construtor que recebe uma nova marca
         public ListViewMarcas(Marca novaMarca) : this()
         {
             Marcas.Add(novaMarca);
