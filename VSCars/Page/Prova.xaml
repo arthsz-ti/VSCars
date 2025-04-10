@@ -26,7 +26,7 @@
             HorizontalOptions="Center" />
 
         <Label 
-            Text="RA: 2404043"
+            Text="RA:2404043"
             FontSize="20"
             HorizontalOptions="Center" />
 
