@@ -24,6 +24,7 @@
         <ShellContent Title="Modelos" ContentTemplate="{DataTemplate page:ModeloPage}" Route="ModeloPage" Icon="star.png" />
         <ShellContent Title="Sobre" ContentTemplate="{DataTemplate page:Sobre}" Route="Sobre" Icon="info.png"/>
         <ShellContent Title="Prova" ContentTemplate="{DataTemplate page:Prova}" Route="Prova" Icon="git.png" />
+        <ShellContent Title="Novo" ContentTemplate="{DataTemplate page:NewPage1}" Route="NewPage1"/>
     </FlyoutItem>
 
     <Shell.FlyoutFooter>

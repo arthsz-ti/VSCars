@@ -59,27 +59,21 @@
 	<ItemGroup>
 	  <AndroidResource Remove="NovaPasta1\**" />
 	  <AndroidResource Remove="NovaPasta2\**" />
-	  <AndroidResource Remove="NovaPasta\**" />
 	  <AndroidResource Remove="Platforms\NovaPasta\**" />
 	  <Compile Remove="NovaPasta1\**" />
 	  <Compile Remove="NovaPasta2\**" />
-	  <Compile Remove="NovaPasta\**" />
 	  <Compile Remove="Platforms\NovaPasta\**" />
 	  <EmbeddedResource Remove="NovaPasta1\**" />
 	  <EmbeddedResource Remove="NovaPasta2\**" />
-	  <EmbeddedResource Remove="NovaPasta\**" />
 	  <EmbeddedResource Remove="Platforms\NovaPasta\**" />
 	  <MauiCss Remove="NovaPasta1\**" />
 	  <MauiCss Remove="NovaPasta2\**" />
-	  <MauiCss Remove="NovaPasta\**" />
 	  <MauiCss Remove="Platforms\NovaPasta\**" />
 	  <MauiXaml Remove="NovaPasta1\**" />
 	  <MauiXaml Remove="NovaPasta2\**" />
-	  <MauiXaml Remove="NovaPasta\**" />
 	  <MauiXaml Remove="Platforms\NovaPasta\**" />
 	  <None Remove="NovaPasta1\**" />
 	  <None Remove="NovaPasta2\**" />
-	  <None Remove="NovaPasta\**" />
 	  <None Remove="Platforms\NovaPasta\**" />
 	</ItemGroup>
 
@@ -95,9 +89,13 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Page\AtualizacaoMarcasPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

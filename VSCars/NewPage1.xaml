@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.NewPage1"
+             Title="NewPage1">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="15">
+
+            <Label
+                x:Name="lblCodigo"
+                Text="Código:"/>
+            <Entry
+                x:Name="txtCodigo"/>
+
+            <Label
+                x:Name="lblNome"
+                Text="Nome:"/>
+            <Entry
+                x:Name="txtNome"/>
+
+            <Button
+                x:Name="btnInserir"
+                Text="Inserir"
+                Clicked="btnInserir_Clicked"/>
+
+            <SearchBar  x:Name="txtsearch" 
+                        Placeholder="Digite o nome da marca"
+                        TextChanged="txtsearch_TextChanged"/>
+
+            <ListView 
+                x:Name="lstmarcas">
+                <ListView.Header>
+                    <Grid ColumnDefinitions="*, *">
+                        <Label Grid.Column="0" Text="Código"/>
+                        <Label Grid.Column="1" Text="Descrição"/>
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*, *">
+                                <Label Grid.Column="0" Text="{Binding Codigo}"/>
+                                <Label Grid.Column="1" Text="{Binding Nome}"/>
+
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
