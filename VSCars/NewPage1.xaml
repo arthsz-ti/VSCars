@@ -9,28 +9,24 @@
             Spacing="15">
 
             <Label
-                x:Name="lblCodigo"
-                Text="Código:"/>
+                x:Name="lblCodigo" Text="Código:"/>
             <Entry
-                x:Name="txtCodigo"/>
+                x:Name="txtCodigo" IsEnabled="False" BackgroundColor="Gray"/>
 
             <Label
-                x:Name="lblNome"
-                Text="Nome:"/>
+                x:Name="lblNome" Text="Nome:"/>
             <Entry
                 x:Name="txtNome"/>
 
-            <Button
-                x:Name="btnInserir"
-                Text="Inserir"
-                Clicked="btnInserir_Clicked"/>
+            <Button x:Name="btnInserir" Text="Inserir" Clicked="btnInserir_Clicked"/>
+            <Button x:Name="btnAlterar" Text="Alterar" Clicked="btnAlterar_Clicked" />
+            <Button x:Name="btnLimpar" Text="Limpar" Clicked="btnLimpar_Clicked" />
 
             <SearchBar  x:Name="txtsearch" 
                         Placeholder="Digite o nome da marca"
                         TextChanged="txtsearch_TextChanged"/>
 
-            <ListView 
-                x:Name="lstmarcas">
+            <ListView x:Name="lstmarcas" ItemSelected="lstmarcas_ItemSelected">
                 <ListView.Header>
                     <Grid ColumnDefinitions="*, *">
                         <Label Grid.Column="0" Text="Código"/>
@@ -41,13 +37,16 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked"/>
+                                <MenuItem Text="Alterar" Clicked="MenuItem_Clicked_1"/>
+                            </ViewCell.ContextActions>
+
                             <Grid ColumnDefinitions="*, *">
                                 <Label Grid.Column="0" Text="{Binding Codigo}"/>
                                 <Label Grid.Column="1" Text="{Binding Nome}"/>
-
                             </Grid>
                         </ViewCell>
-
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
