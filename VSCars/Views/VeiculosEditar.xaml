@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSCars.Views.VeiculosEditar"
+             Title="VeiculosEditar">
+    <VerticalStackLayout
+            Padding="20,0"
+            Spacing="15">
+
+        <Label x:Name="lblCodigo" Text="Código:"/>
+        <Entry x:Name="txtCodigo" IsEnabled="False" Text="{Binding Codigo}"/>
+
+        <Label x:Name="lblNome" Text="Nome:"/>
+        <Entry x:Name="txtNome" Text="{Binding Nome}"/>
+
+        <Button x:Name="btnAlterar" Text="Alterar" Clicked="btnAlterar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
